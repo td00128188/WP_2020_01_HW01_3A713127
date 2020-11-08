@@ -21,25 +21,21 @@ namespace WP_2020_01_HW01_3A713127
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            MD5 md5 = MD5.Create();
+            byte[] source = Encoding.Default.GetBytes(tb1.Text);
+            byte[] crypto = md5.ComputeHash(source);
+            string result = Convert.ToBase64String(crypto);
+            rtb1.Text = result;
+            if(tb1.Text == "")
+            {
+                rtb1.Text = "";
+            }
         }
 
         private void rtb1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
-    }
-    public static class MD5Extensions
-    {
-        public static string ToMD5(this string str)
-        {
-            using (var cryptoMD5 = System.Security.Cryptography.MD5.Create())
-            {
-                byte[] source = Encoding.Default.GetBytes(str);
-                byte[] crypto = cryptoMD5.ComputeHash(source);
-                string result = Convert.ToBase64String(crypto);
-                return result;
-            }
-        }
+
     }
 }

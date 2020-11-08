@@ -31,12 +31,13 @@
             this.tb1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rtb1 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb1
             // 
             this.tb1.Font = new System.Drawing.Font("新細明體", 20F);
-            this.tb1.Location = new System.Drawing.Point(197, 164);
+            this.tb1.Location = new System.Drawing.Point(12, 95);
             this.tb1.Multiline = true;
             this.tb1.Name = "tb1";
             this.tb1.Size = new System.Drawing.Size(346, 55);
@@ -47,27 +48,38 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新細明體", 20F);
-            this.label1.Location = new System.Drawing.Point(283, 85);
+            this.label1.Location = new System.Drawing.Point(6, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 34);
+            this.label1.Size = new System.Drawing.Size(117, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "請輸入名字";
+            this.label1.Text = "請輸入";
             // 
             // rtb1
             // 
             this.rtb1.Font = new System.Drawing.Font("新細明體", 16F);
-            this.rtb1.Location = new System.Drawing.Point(197, 251);
+            this.rtb1.Location = new System.Drawing.Point(12, 251);
             this.rtb1.Name = "rtb1";
-            this.rtb1.Size = new System.Drawing.Size(346, 246);
+            this.rtb1.Size = new System.Drawing.Size(758, 246);
             this.rtb1.TabIndex = 2;
             this.rtb1.Text = "";
             this.rtb1.TextChanged += new System.EventHandler(this.rtb1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("新細明體", 20F);
+            this.label2.Location = new System.Drawing.Point(12, 189);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 34);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "加密結果";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.rtb1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb1);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.TextBox tb1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtb1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
